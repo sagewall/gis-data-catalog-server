@@ -1,0 +1,24 @@
+{
+  "name": "gis-data-catalog-server",
+  "version": "1.0.0",
+  "description": "GIS Data Catalog Express Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagewall/gis-data-catalog-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagewall/gis-data-catalog-server/issues"
+  },
+  "homepage": "https://github.com/sagewall/gis-data-catalog-server#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1"
+  }
+}
