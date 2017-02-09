@@ -94,4 +94,17 @@ router.route('/datasets/:_id')
     })
   });
 
+router.get('/search/:name', (req, res) => {
+  const searchExpression = new RegExp(req.params.name, 'i');
+  Dataset.find({
+    name: searchExpression
+  }, (err, datasets) => {
+    if (err) {
+      res.send(err);
+    }
+
+    res.json(datasets);
+  })
+});
+
 module.exports = router;
