@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const DatasetSchema = new Schema({
-  id: Number,
   name: String,
   date: Date,
   about: String,
