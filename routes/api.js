@@ -1,10 +1,11 @@
 const express = require('express');
-const router = express.Router();
 const Dataset = require('../models/dataset');
 const mongoose = require('mongoose');
-const dbuser = 'public';
-const dbpassword = '=2^0G]/+ZNkJ';
-mongoose.connect(`mongodb://${dbuser}:${dbpassword}@ds147079.mlab.com:47079/gis-data-catalog`);
+const credentials = require('../credentials');
+
+mongoose.connect(`mongodb://${credentials.dbuser}:${credentials.dbpassword}@ds147079.mlab.com:47079/gis-data-catalog`);
+
+const router = express.Router();
 
 router.use((req, res, next) => {
   console.log('Something is happening.');
