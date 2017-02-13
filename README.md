@@ -1,11 +1,14 @@
 # gis-data-catalog-server
 GIS Data Catalog Express Server and API
 
-Requires a file named credentials.js be created at the root level with exported dbuser and dbpassword properties.
+Requires a file named db-connection.js be created at the root level with exported properties.
 ```
 module.exports = {
    dbuser:'database user',
-   dbpassword: 'database password'
+   dbpassword: 'database password',
+   host: 'host server',
+   port: 'host port number',
+   database: 'host database'
 };
 ```
 

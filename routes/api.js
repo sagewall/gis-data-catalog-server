@@ -1,9 +1,9 @@
 const express = require('express');
 const Dataset = require('../models/dataset');
 const mongoose = require('mongoose');
-const credentials = require('../credentials');
+const dbConnection = require('../db-connection');
 
-mongoose.connect(`mongodb://${credentials.dbuser}:${credentials.dbpassword}@ds147079.mlab.com:47079/gis-data-catalog`);
+mongoose.connect(`mongodb://${dbConnection.dbuser}:${dbConnection.dbpassword}@${dbConnection.host}:${dbConnection.port}/${dbConnection.database}`);
 
 const router = express.Router();
 
