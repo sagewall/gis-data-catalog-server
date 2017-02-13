@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const http = require('http');
 const https = require('https');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -19,11 +18,6 @@ app.use('/api', api);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
-
-const httpPort = process.env.PORT || '3000';
-const httpServer = http.createServer(app);
-httpServer.listen(httpPort, () => console.log(`API http on:${httpPort}`));
-
 
 const httpsOptions = {
   key: fs.readFileSync(path.join(__dirname, 'selfsigned.key')),
@@ -49,5 +43,5 @@ const httpsOptions = {
   honorCipherOrder: true
 };
 const httpsPort = '3443';
-const httpsServer = https.createServer(httpsOptions, app);
-httpsServer.listen(httpsPort, () => console.log(`API https on: ${httpsPort}`));
+const server = https.createServer(httpsOptions, app);
+server.listen(httpsPort, () => console.log(`API listening on: ${httpsPort}`));
