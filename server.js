@@ -20,8 +20,8 @@ app.get('*', (req, res) => {
 });
 
 const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, 'selfsigned.key')),
-  cert: fs.readFileSync(path.join(__dirname, 'selfsigned.crt')),
+  key: fs.readFileSync(path.join(__dirname, 'server.key')),
+  cert: fs.readFileSync(path.join(__dirname, 'server.crt')),
   ciphers: [
     "ECDHE-RSA-AES256-SHA384",
     "DHE-RSA-AES256-SHA384",
