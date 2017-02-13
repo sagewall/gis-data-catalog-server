@@ -13,7 +13,7 @@ router.use((req, res, next) => {
 });
 
 router.get('/', (req, res) => {
-  res.send('gis-data-catalog-server api');
+  res.send('gis-data-catalog-httpServer api');
 });
 
 router.route('/datasets')

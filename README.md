@@ -6,4 +6,7 @@ Requires a file named credentials.js be created at the root level with exported 
 module.exports = {
    dbuser:'database user',
    dbpassword: 'database password'
-};```
+};
+```
+
+Requires a certificate and key at the root level referenced in server.js
