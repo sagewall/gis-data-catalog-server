@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const https = require('https');
+const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -19,29 +19,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-const httpsOptions = {
-  key: fs.readFileSync(path.join(__dirname, 'server.key')),
-  cert: fs.readFileSync(path.join(__dirname, 'server.crt')),
-  ciphers: [
-    "ECDHE-RSA-AES256-SHA384",
-    "DHE-RSA-AES256-SHA384",
-    "ECDHE-RSA-AES256-SHA256",
-    "DHE-RSA-AES256-SHA256",
-    "ECDHE-RSA-AES128-SHA256",
-    "DHE-RSA-AES128-SHA256",
-    "HIGH",
-    "!aNULL",
-    "!eNULL",
-    "!EXPORT",
-    "!DES",
-    "!RC4",
-    "!MD5",
-    "!PSK",
-    "!SRP",
-    "!CAMELLIA"
-  ].join(':'),
-  honorCipherOrder: true
-};
-const httpsPort = '3443';
-const server = https.createServer(httpsOptions, app);
-server.listen(httpsPort, () => console.log(`API listening on: ${httpsPort}`));
+const port = process.env.PORT || 3000;
+const server = http.createServer(app);
+server.listen(port, () => console.log(`API listening on: ${port}`));
