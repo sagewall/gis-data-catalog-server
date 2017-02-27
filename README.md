@@ -10,28 +10,18 @@ DBPORT='database port'
 DBNAME='database name'
 ```
 
-### Server Deployment 
-Install node
+### Heroku Deployment
 ```
-curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-Install pm2
-```
-sudo npm install pm2 -g
-pm2 start server.js
-pm2 startup systemd
-pm2 save
+heroku create
+git push heroku master
+heroku config:set DBUSER='username'
+heroku config:set DBPASSWORD='password'
+heroku config:set DBHOST='database host'
+heroku config:set DBPORT= database port
+heroku config:set DBNAME='database name'
 ```
 
-Forward :443 to :3443 with iptables-persistent.  May need to change network interface and ports.
+### Docker Deployment
 ```
-sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 443 -j REDIRECT --to-port 3443
-sudo apt install iptables-persistent
-```
-To save or reload current iptables rules
-```
-sudo netfilter-persistent save
-sudo netfilter-persistent reload
+docker run -d -p 80:3000 --env-file ./.env --name gis-data-catalog-server sagewall/gis-data-catalog-server
 ```
