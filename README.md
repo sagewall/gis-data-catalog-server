@@ -1,20 +1,16 @@
 # gis-data-catalog-server
 GIS Data Catalog Express Server and API
 
-Requires a file named db-connection.js be created at the root level with exported properties.
+Requires environment variables
 ```
-module.exports = {
-   dbuser:'database user',
-   dbpassword: 'database password',
-   host: 'host server',
-   port: 'host port number',
-   database: 'host database'
-};
+DBUSER='username'
+DBPASSWORD='password'
+DBHOST='database host'
+DBPORT='database port'
+DBNAME='database name'
 ```
 
-Requires a certificate and key at the root level referenced in server.js
-
-###Deployment 
+### Server Deployment 
 Install node
 ```
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -

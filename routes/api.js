@@ -1,9 +1,8 @@
 const express = require('express');
 const Dataset = require('../models/dataset');
 const mongoose = require('mongoose');
-const dbConnection = require('../db-connection');
 
-mongoose.connect(`mongodb://${dbConnection.dbuser}:${dbConnection.dbpassword}@${dbConnection.host}:${dbConnection.port}/${dbConnection.database}`);
+mongoose.connect(`mongodb://${process.env.DBUSER}:${process.env.DBPASSWORD}@${process.env.DBHOST}:${process.env.DBPORT}/${process.env.DBNAME}`);
 
 const router = express.Router();
 
