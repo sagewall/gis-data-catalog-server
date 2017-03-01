@@ -6,12 +6,17 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const api = require(path.join(__dirname, 'routes/api'));
+const certbotResponse = process.env.CERTBOTRESPONSE;
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'dist')));
+
+app.use('/.well-known/acme-challenge/:content', (req, res) => {
+  res.send(certbotResponse);
+});
 
 app.use('/api', api);
 
