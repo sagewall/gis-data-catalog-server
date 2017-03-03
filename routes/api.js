@@ -7,7 +7,7 @@ mongoose.connect(`mongodb://${process.env.DBUSER}:${process.env.DBPASSWORD}@${pr
 const router = express.Router();
 
 router.use((req, res, next) => {
-  console.log('Something is happening.');
+  console.log(req.originalUrl);
   next();
 });
 
