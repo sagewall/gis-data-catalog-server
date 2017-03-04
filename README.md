@@ -25,5 +25,5 @@ heroku config:set CERTBOTRESPONSE=certbot acme response
 
 ### Docker Deployment
 ```
-docker run -d -p 80:3000 -e DBUSER='database user' -e DBPASSWORD='database password' -e DBHOST='host name' -e DBPORT=port -e DBNAME='database name' gis-data-catalog-server
+docker run -d -p 80:3000 --env-file ./.env --name gis-data-catalog-server sagewall/gis-data-catalog-server:latest
 ```
