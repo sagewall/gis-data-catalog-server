@@ -8,6 +8,8 @@ DBPASSWORD=password
 DBHOST=database host
 DBPORT=database port
 DBNAME=database name
+ME_CONFIG_BASICAUTH_USERNAME=mongo-express username
+ME_CONFIG_BASICAUTH_PASSWORD=mongo-express password
 CERTBOTRESPONSE=certbot acme response
 ```
 
@@ -21,6 +23,8 @@ heroku config:set DBHOST=database host
 heroku config:set DBPORT=database port
 heroku config:set DBNAME=database name
 heroku config:set CERTBOTRESPONSE=certbot acme response
+heroku config:set ME_CONFIG_BASICAUTH_USERNAME=mongo-express username
+heroku config:set ME_CONFIG_BASICAUTH_PASSWORD=mongo-express password
 ```
 
 ### Docker Deployment
