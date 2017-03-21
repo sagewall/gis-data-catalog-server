@@ -794,14 +794,14 @@ module.exports = "<div>\r\n  <form class=\"form-group\">\r\n    <input #searchBo
 /***/ 542:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-9\">\r\n    <app-dataset *ngFor=\"let dataset of datasets\" [dataset]=\"dataset\"></app-dataset>\r\n  </div>\r\n  <div class=\"col-3\">\r\n    <app-catalog-search></app-catalog-search>\r\n  </div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-3\">\r\n    <app-catalog-search></app-catalog-search>\r\n  </div>\r\n  <div class=\"col-md-9\">\r\n    <app-dataset *ngFor=\"let dataset of datasets\" [dataset]=\"dataset\"></app-dataset>\r\n  </div>\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
 /***/ 543:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\" *ngIf=\"dataset\">\r\n  <div class=\"card-block\">\r\n    <h4 class=\"card-title\">{{dataset.name}}</h4>\r\n    <p class=\"card-text\">{{dataset.about}}</p>\r\n    <ul class=\"list-group list-group-flush\">\r\n      <li class=\"list-group-item\">Last Update: {{dataset.date}}</li>\r\n    </ul>\r\n    <app-leaflet-map [dataset]=\"dataset\"></app-leaflet-map>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button class=\"btn btn-primary\" (click)=\"download()\">Download</button>\r\n    <p><a class=\"card-link\" [routerLink]=\"['/catalog']\">Back to catalog</a></p>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"card\" *ngIf=\"dataset\">\r\n  <div class=\"card-block\">\r\n    <h4 class=\"card-title\">{{dataset.name}}</h4>\r\n    <p class=\"card-text\">{{dataset.about}}</p>\r\n    <ul class=\"list-group list-group-flush\">\r\n      <li class=\"list-group-item\">Last Update: {{dataset.date}}</li>\r\n    </ul>\r\n    <app-leaflet-map [dataset]=\"dataset\"></app-leaflet-map>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button class=\"btn btn-primary\" (click)=\"download()\">Download</button>\r\n    <p><a class=\"card-link\" [routerLink]=\"['/catalog']\">Back to catalog</a></p>\r\n    <p>\r\n      <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">\r\n        <img alt=\"Creative Commons License\" style=\"border-width:0\"\r\n             src=\"//i.creativecommons.org/l/by/4.0/88x31.png\"/>\r\n      </a>\r\n      This work is licensed under a <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">Creative Commons\r\n      Attribution 4.0 International License</a>\r\n    </p>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
