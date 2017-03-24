@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const DatasetSchema = new Schema({
+const datasetSchema = new mongoose.Schema({
   name: String,
   date: Date,
   about: String,
+  tags: [String],
   downloadUrl: String,
   dynamicMapLayer: String,
   lat: Number,
@@ -12,4 +12,4 @@ const DatasetSchema = new Schema({
   zoom: Number
 });
 
-module.exports = mongoose.model('Dataset', DatasetSchema);
+module.exports = mongoose.model('Dataset', datasetSchema);

@@ -12,7 +12,7 @@ router.use((req, res, next) => {
 });
 
 router.get('/', (req, res) => {
-  res.send('gis-data-catalog-httpServer api');
+  res.send('gis-data-catalog api');
 });
 
 router.route('/datasets')
@@ -21,6 +21,7 @@ router.route('/datasets')
     dataset.name = req.body.name;
     dataset.date = req.body.date;
     dataset.about = req.body.about;
+    dataset.tags = req.body.tags;
     dataset.downloadUrl = req.body.downloadUrl;
     dataset.dynamicMapLayer = req.body.dynamicMapLayer;
     dataset.lat = req.body.lat;
@@ -66,6 +67,7 @@ router.route('/datasets/:_id')
       dataset.name = req.body.name;
       dataset.date = req.body.date;
       dataset.about = req.body.about;
+      dataset.tags = req.body.tags;
       dataset.downloadUrl = req.body.downloadUrl;
       dataset.dynamicMapLayer = req.body.dynamicMapLayer;
       dataset.lat = req.body.lat;
