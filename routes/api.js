@@ -96,7 +96,7 @@ router.route('/datasets/:_id')
     })
   });
 
-router.get('/search/:name', (req, res) => {
+router.get('/datasets/search/:name', (req, res) => {
   const searchExpression = new RegExp(req.params.name, 'i');
   Dataset.find({
     name: searchExpression
