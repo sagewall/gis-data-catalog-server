@@ -109,4 +109,27 @@ router.get('/datasets/search/:name', (req, res) => {
   })
 });
 
+router.get('/tags', (req, res) => {
+    Dataset.find().distinct('tags', {}, (err, tags) => {
+        if (err) {
+            res.send(err);
+        }
+
+        res.json(tags);
+    })
+});
+
+router.get('/tags/search/:tag', (req, res) => {
+    const searchExpression = new RegExp(req.params.tag, 'i');
+    Dataset.find({
+        tags: searchExpression
+    }, (err, datasets) => {
+        if (err) {
+            res.send(err);
+        }
+
+        res.json(datasets);
+    })
+});
+
 module.exports = router;
