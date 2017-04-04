@@ -6,6 +6,33 @@ webpackJsonp([2,5],{
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
+var content = __webpack_require__(169);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__(65)(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../postcss-loader/index.js!./bootstrap.css", function() {
+			var newContent = require("!!../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../postcss-loader/index.js!./bootstrap.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 101:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
 var content = __webpack_require__(170);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
@@ -27,7 +54,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 101:
+/***/ 102:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -92,7 +119,7 @@ exports = module.exports = __webpack_require__(7)();
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n", ""]);
 
 // exports
 
@@ -123,9 +150,9 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAApCAYAAADA
 /***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(99);
 __webpack_require__(100);
-module.exports = __webpack_require__(101);
+__webpack_require__(101);
+module.exports = __webpack_require__(102);
 
 
 /***/ }),
@@ -437,33 +464,6 @@ module.exports = function() {
 	return list;
 };
 
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(169);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// add the styles to the DOM
-var update = __webpack_require__(65)(content, {});
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../postcss-loader/index.js!./bootstrap.css", function() {
-			var newContent = require("!!../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../postcss-loader/index.js!./bootstrap.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ })
 
