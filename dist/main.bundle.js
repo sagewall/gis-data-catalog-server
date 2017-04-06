@@ -439,7 +439,7 @@ exports = module.exports = __webpack_require__(19)();
 
 
 // module
-exports.push([module.i, ".search-result {\n  cursor: pointer; }\n", ""]);
+exports.push([module.i, ".search-card {\n  margin-top: 1em; }\n\n.search-result {\n  cursor: pointer; }\n\n.search-result:hover {\n  color: #fff;\n  background-color: #0275d8; }\n", ""]);
 
 // exports
 
@@ -457,7 +457,7 @@ exports = module.exports = __webpack_require__(19)();
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".catalog {\n  margin-top: 1em; }\n\n.tags-card {\n  margin-top: 1em; }\n\n.tag {\n  cursor: pointer; }\n\n.tag:hover {\n  color: #fff;\n  background-color: #0267bf; }\n", ""]);
 
 // exports
 
@@ -542,28 +542,28 @@ module.exports = module.exports.toString();
 /***/ 336:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/catalog']\">{{title}}</a>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/help']\">Help</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <div class=\"row\">\r\n    <div class=\"col\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n  <nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\"\r\n            data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\"\r\n            aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/catalog']\">{{title}}</a>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n      <div class=\"mr-auto\"></div>\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/help']\">Help</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 337:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <form class=\"form-group\">\r\n    <input #searchBox (keyup)=\"search(searchBox.value)\" class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\r\n  </form>\r\n  <ul class=\"list-group\">\r\n    <li *ngFor=\"let dataset of datasets | async\"\r\n        (click)=\"gotoDetail(dataset)\" class=\"list-group-item search-result\" >\r\n      {{dataset.name}}\r\n    </li>\r\n  </ul>\r\n</div>\r\n"
+module.exports = "<div class=\"card search-card\">\r\n  <div class=\"card-block\">\r\n    <form>\r\n      <div class=\"form-group\">\r\n        <input #searchBox (keyup)=\"search(searchBox.value)\" class=\"form-control mr-sm-2\" type=\"text\"\r\n               placeholder=\"Search\">\r\n      </div>\r\n    </form>\r\n    <ul class=\"list-group\">\r\n      <li *ngFor=\"let dataset of datasets | async\"\r\n          (click)=\"gotoDetail(dataset)\" class=\"list-group-item search-result\">\r\n        {{dataset.name}}\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 338:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <div class=\"col-md-3\">\r\n    <app-catalog-search></app-catalog-search>\r\n    <p>Click a tag to filter datasets</p>\r\n    <div class=\"btn-group-vertical\" role=\"group\">\r\n      <button type=\"button\" class=\"button btn-secondary btn-sm\"\r\n              [class.active]=\"tag === selectedTag\"\r\n              *ngFor=\"let tag of tags\" (click)=\"filterDatasets(tag)\">{{ tag }}</button>\r\n    </div>\r\n  </div>\r\n  <div class=\"col-md-9\">\r\n    <app-dataset *ngFor=\"let dataset of datasets\" [dataset]=\"dataset\"></app-dataset>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"row\">\r\n  <aside class=\"col-md-3\">\r\n    <app-catalog-search></app-catalog-search>\r\n    <div class=\"card tags-card\">\r\n      <div class=\"card-block\">\r\n        <h5 class=\"card-title\">Filter by tag</h5>\r\n        <ul class=\"list-group\">\r\n          <li class=\"list-group-item tag\" [class.active]=\"tag === selectedTag\"\r\n              *ngFor=\"let tag of tags\" (click)=\"filterDatasets(tag)\">{{ tag }}\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </aside>\r\n  <div class=\"col-md-9 catalog\">\r\n    <app-dataset *ngFor=\"let dataset of datasets\" [dataset]=\"dataset\"></app-dataset>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 339:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\" *ngIf=\"dataset\">\r\n  <div class=\"card-block\">\r\n    <h4 class=\"card-title\">{{dataset.name}}</h4>\r\n    <p class=\"card-text\">{{dataset.about}}</p>\r\n    <ul class=\"list-group list-group-flush\">\r\n      <li class=\"list-group-item\">\r\n        <span class=\"badge badge-default\" *ngFor=\"let tag of dataset.tags\">{{ tag }}</span>\r\n      </li>\r\n      <li class=\"list-group-item\">Last Update: {{dataset.date}}</li>\r\n    </ul>\r\n    <app-leaflet-map [dataset]=\"dataset\"></app-leaflet-map>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button class=\"btn btn-primary\" (click)=\"download()\">Download</button>\r\n    <p><a class=\"card-link\" [routerLink]=\"['/catalog']\">Back to catalog</a></p>\r\n    <p>\r\n      <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">\r\n        <img alt=\"Creative Commons License\"\r\n             src=\"//i.creativecommons.org/l/by/4.0/88x31.png\"/>\r\n      </a>\r\n      This work is licensed under a <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">Creative Commons\r\n      Attribution 4.0 International License</a>\r\n    </p>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"card\" *ngIf=\"dataset\">\r\n  <div class=\"card-block\">\r\n    <h4 class=\"card-title\">{{dataset.name}}</h4>\r\n    <p class=\"card-text\">{{dataset.about}}</p>\r\n    <p><span class=\"badge badge-pill badge-info\" *ngFor=\"let tag of dataset.tags\">{{ tag }}</span></p>\r\n    <p>Last Update: {{dataset.date | date}}</p>\r\n    <app-leaflet-map [dataset]=\"dataset\"></app-leaflet-map>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button class=\"btn btn-primary\" (click)=\"download()\">Download</button>\r\n    <p><a class=\"card-link\" [routerLink]=\"['/catalog']\">Back to catalog</a></p>\r\n    <p>\r\n      <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">\r\n        <img alt=\"Creative Commons License\"\r\n             src=\"//i.creativecommons.org/l/by/4.0/88x31.png\"/>\r\n      </a>\r\n      This work is licensed under a <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">Creative Commons\r\n      Attribution 4.0 International License</a>\r\n    </p>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
