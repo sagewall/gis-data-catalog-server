@@ -3,6 +3,7 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
+const helmet = require('helmet');
 const cors = require('cors');
 const mongoExpress = require('mongo-express/lib/middleware');
 const mongoExpressConfig = require('./mongo-express-config');
@@ -11,6 +12,7 @@ const api = require(path.join(__dirname, 'routes/api'));
 const certbotResponse = process.env.CERTBOTRESPONSE;
 
 const app = express();
+app.use(helmet());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
