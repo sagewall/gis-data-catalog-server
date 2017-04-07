@@ -1,6 +1,6 @@
 webpackJsonp([1,5],{
 
-/***/ 151:
+/***/ 152:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,19 +9,19 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 151;
+webpackEmptyContext.id = 152;
 
 
 /***/ }),
 
-/***/ 152:
+/***/ 153:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__(166);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(51);
 
 
@@ -35,7 +35,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 163:
+/***/ 164:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -44,6 +44,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help_help_component__ = __webpack_require__(97);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__catalog_catalog_component__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dataset_detail_dataset_detail_component__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__page_not_found_page_not_found_component__ = __webpack_require__(98);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -56,11 +57,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', redirectTo: '/catalog', pathMatch: 'full' },
     { path: 'help', component: __WEBPACK_IMPORTED_MODULE_2__help_help_component__["a" /* HelpComponent */] },
     { path: 'catalog', component: __WEBPACK_IMPORTED_MODULE_3__catalog_catalog_component__["a" /* CatalogComponent */] },
-    { path: 'catalog/datasets/:id', component: __WEBPACK_IMPORTED_MODULE_4__dataset_detail_dataset_detail_component__["a" /* DatasetDetailComponent */] }
+    { path: 'catalog/datasets/:id', component: __WEBPACK_IMPORTED_MODULE_4__dataset_detail_dataset_detail_component__["a" /* DatasetDetailComponent */] },
+    { path: '**', component: __WEBPACK_IMPORTED_MODULE_5__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */] }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -80,7 +83,7 @@ AppRoutingModule = __decorate([
 
 /***/ }),
 
-/***/ 164:
+/***/ 165:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102,8 +105,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* Component */])({
         selector: 'app-root',
-        template: __webpack_require__(336),
-        styles: [__webpack_require__(325)]
+        template: __webpack_require__(338),
+        styles: [__webpack_require__(326)]
     })
 ], AppComponent);
 
@@ -111,18 +114,19 @@ AppComponent = __decorate([
 
 /***/ }),
 
-/***/ 165:
+/***/ 166:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_routing_app_routing_module__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__catalog_catalog_module__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_routing_app_routing_module__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__catalog_catalog_module__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(165);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__help_help_component__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__page_not_found_page_not_found_component__ = __webpack_require__(98);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -130,6 +134,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -147,7 +152,8 @@ AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__help_help_component__["a" /* HelpComponent */]
+            __WEBPACK_IMPORTED_MODULE_7__help_help_component__["a" /* HelpComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__page_not_found_page_not_found_component__["a" /* PageNotFoundComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -165,7 +171,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 166:
+/***/ 167:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -176,13 +182,13 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dataset_search_service__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_debounceTime__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_debounceTime__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_debounceTime___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_debounceTime__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_distinctUntilChanged__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_distinctUntilChanged___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_add_operator_distinctUntilChanged__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CatalogSearchComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -234,8 +240,8 @@ var CatalogSearchComponent = (function () {
 CatalogSearchComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* Component */])({
         selector: 'app-catalog-search',
-        template: __webpack_require__(337),
-        styles: [__webpack_require__(326)],
+        template: __webpack_require__(339),
+        styles: [__webpack_require__(327)],
         providers: [__WEBPACK_IMPORTED_MODULE_4__dataset_search_service__["a" /* DatasetSearchService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_4__dataset_search_service__["a" /* DatasetSearchService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__dataset_search_service__["a" /* DatasetSearchService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
@@ -246,7 +252,7 @@ var _a, _b;
 
 /***/ }),
 
-/***/ 167:
+/***/ 168:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -254,12 +260,12 @@ var _a, _b;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__catalog_component__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dataset_dataset_component__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__dataset_dataset_component__ = __webpack_require__(170);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__dataset_detail_dataset_detail_component__ = __webpack_require__(95);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__dataset_service__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__tag_service__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__catalog_search_catalog_search_component__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__leaflet_map_leaflet_map_component__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__tag_service__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__catalog_search_catalog_search_component__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__leaflet_map_leaflet_map_component__ = __webpack_require__(171);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CatalogModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -306,7 +312,7 @@ CatalogModule = __decorate([
 
 /***/ }),
 
-/***/ 168:
+/***/ 169:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -321,7 +327,7 @@ var Dataset = (function () {
 
 /***/ }),
 
-/***/ 169:
+/***/ 170:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -349,8 +355,8 @@ __decorate([
 DatasetComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* Component */])({
         selector: 'app-dataset',
-        template: __webpack_require__(340),
-        styles: [__webpack_require__(329)]
+        template: __webpack_require__(342),
+        styles: [__webpack_require__(330)]
     })
 ], DatasetComponent);
 
@@ -358,15 +364,15 @@ DatasetComponent = __decorate([
 
 /***/ }),
 
-/***/ 170:
+/***/ 171:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataset__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_leaflet__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataset__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_leaflet__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_leaflet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_esri_leaflet__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_esri_leaflet__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_esri_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_esri_leaflet__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LeafletMapComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -402,8 +408,8 @@ __decorate([
 LeafletMapComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* Component */])({
         selector: 'app-leaflet-map',
-        template: __webpack_require__(342),
-        styles: [__webpack_require__(331)]
+        template: __webpack_require__(344),
+        styles: [__webpack_require__(332)]
     }),
     __metadata("design:paramtypes", [])
 ], LeafletMapComponent);
@@ -413,10 +419,10 @@ var _a;
 
 /***/ }),
 
-/***/ 325:
+/***/ 326:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)();
+exports = module.exports = __webpack_require__(16)();
 // imports
 
 
@@ -431,10 +437,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 326:
+/***/ 327:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)();
+exports = module.exports = __webpack_require__(16)();
 // imports
 
 
@@ -449,10 +455,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 327:
+/***/ 328:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)();
+exports = module.exports = __webpack_require__(16)();
 // imports
 
 
@@ -467,28 +473,10 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 328:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(19)();
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
 /***/ 329:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)();
+exports = module.exports = __webpack_require__(16)();
 // imports
 
 
@@ -506,7 +494,7 @@ module.exports = module.exports.toString();
 /***/ 330:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)();
+exports = module.exports = __webpack_require__(16)();
 // imports
 
 
@@ -524,7 +512,25 @@ module.exports = module.exports.toString();
 /***/ 331:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)();
+exports = module.exports = __webpack_require__(16)();
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ 332:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(16)();
 // imports
 
 
@@ -539,59 +545,84 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ 336:
-/***/ (function(module, exports) {
+/***/ 333:
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "<div class=\"container\">\r\n  <nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\"\r\n            data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\"\r\n            aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/catalog']\">{{title}}</a>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n      <div class=\"mr-auto\"></div>\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/help']\">Help</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
+exports = module.exports = __webpack_require__(16)();
+// imports
 
-/***/ }),
 
-/***/ 337:
-/***/ (function(module, exports) {
+// module
+exports.push([module.i, "", ""]);
 
-module.exports = "<div class=\"card search-card\">\r\n  <div class=\"card-block\">\r\n    <form>\r\n      <div class=\"form-group\">\r\n        <input #searchBox (keyup)=\"search(searchBox.value)\" class=\"form-control mr-sm-2\" type=\"text\"\r\n               placeholder=\"Search\">\r\n      </div>\r\n    </form>\r\n    <ul class=\"list-group\">\r\n      <li *ngFor=\"let dataset of datasets | async\"\r\n          (click)=\"gotoDetail(dataset)\" class=\"list-group-item search-result\">\r\n        {{dataset.name}}\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
 
 /***/ }),
 
 /***/ 338:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <aside class=\"col-md-3\">\r\n    <app-catalog-search></app-catalog-search>\r\n    <div class=\"card tags-card\">\r\n      <div class=\"card-block\">\r\n        <h5 class=\"card-title\">Filter by tag</h5>\r\n        <ul class=\"list-group\">\r\n          <li class=\"list-group-item tag\" [class.active]=\"tag === selectedTag\"\r\n              *ngFor=\"let tag of tags\" (click)=\"filterDatasets(tag)\">{{ tag }}\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </aside>\r\n  <div class=\"col-md-9 catalog\">\r\n    <app-dataset *ngFor=\"let dataset of datasets\" [dataset]=\"dataset\"></app-dataset>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\r\n  <nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\r\n    <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\"\r\n            data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\"\r\n            aria-label=\"Toggle navigation\">\r\n      <span class=\"navbar-toggler-icon\"></span>\r\n    </button>\r\n    <a class=\"navbar-brand\" [routerLink]=\"['/catalog']\">{{title}}</a>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n      <div class=\"mr-auto\"></div>\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [routerLink]=\"['/help']\">Help</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 339:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\" *ngIf=\"dataset\">\r\n  <div class=\"card-block\">\r\n    <h4 class=\"card-title\">{{dataset.name}}</h4>\r\n    <p class=\"card-text\">{{dataset.about}}</p>\r\n    <p><span class=\"badge badge-pill badge-info\" *ngFor=\"let tag of dataset.tags\">{{ tag }}</span></p>\r\n    <p>Last Update: {{dataset.date | date}}</p>\r\n    <app-leaflet-map [dataset]=\"dataset\"></app-leaflet-map>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button class=\"btn btn-primary\" (click)=\"download()\">Download</button>\r\n    <p><a class=\"card-link\" [routerLink]=\"['/catalog']\">Back to catalog</a></p>\r\n    <p>\r\n      <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">\r\n        <img alt=\"Creative Commons License\"\r\n             src=\"//i.creativecommons.org/l/by/4.0/88x31.png\"/>\r\n      </a>\r\n      This work is licensed under a <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">Creative Commons\r\n      Attribution 4.0 International License</a>\r\n    </p>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"card search-card\">\r\n  <div class=\"card-block\">\r\n    <form>\r\n      <div class=\"form-group\">\r\n        <input #searchBox (keyup)=\"search(searchBox.value)\" class=\"form-control mr-sm-2\" type=\"text\"\r\n               placeholder=\"Search\">\r\n      </div>\r\n    </form>\r\n    <ul class=\"list-group\">\r\n      <li *ngFor=\"let dataset of datasets | async\"\r\n          (click)=\"gotoDetail(dataset)\" class=\"list-group-item search-result\">\r\n        {{dataset.name}}\r\n      </li>\r\n    </ul>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 340:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"card\">\r\n  <div class=\"card-block\">\r\n    <h3 class=\"card-title\">{{dataset.name}}</h3>\r\n    <p>{{dataset.about}}</p>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/catalog/datasets', dataset._id]\">Details</a>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n"
+module.exports = "<div class=\"row\">\r\n  <aside class=\"col-md-3\">\r\n    <app-catalog-search></app-catalog-search>\r\n    <div class=\"card tags-card\">\r\n      <div class=\"card-block\">\r\n        <h5 class=\"card-title\">Filter by tag</h5>\r\n        <ul class=\"list-group\">\r\n          <li class=\"list-group-item tag\" [class.active]=\"tag === selectedTag\"\r\n              *ngFor=\"let tag of tags\" (click)=\"filterDatasets(tag)\">{{ tag }}\r\n          </li>\r\n        </ul>\r\n      </div>\r\n    </div>\r\n  </aside>\r\n  <div class=\"col-md-9 catalog\">\r\n    <app-dataset *ngFor=\"let dataset of datasets\" [dataset]=\"dataset\"></app-dataset>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 341:
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  help works!\r\n</p>\r\n"
+module.exports = "<div class=\"card\" *ngIf=\"dataset\">\r\n  <div class=\"card-block\">\r\n    <h4 class=\"card-title\">{{dataset.name}}</h4>\r\n    <p class=\"card-text\">{{dataset.about}}</p>\r\n    <p><span class=\"badge badge-pill badge-info\" *ngFor=\"let tag of dataset.tags\">{{ tag }}</span></p>\r\n    <p>Last Update: {{dataset.date | date}}</p>\r\n    <app-leaflet-map [dataset]=\"dataset\"></app-leaflet-map>\r\n  </div>\r\n  <div class=\"card-footer\">\r\n    <button class=\"btn btn-primary\" (click)=\"download()\">Download</button>\r\n    <p><a class=\"card-link\" [routerLink]=\"['/catalog']\">Back to catalog</a></p>\r\n    <p>\r\n      <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">\r\n        <img alt=\"Creative Commons License\"\r\n             src=\"//i.creativecommons.org/l/by/4.0/88x31.png\"/>\r\n      </a>\r\n      This work is licensed under a <a rel=\"license\" href=\"//creativecommons.org/licenses/by/4.0/\">Creative Commons\r\n      Attribution 4.0 International License</a>\r\n    </p>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
 /***/ 342:
 /***/ (function(module, exports) {
 
+module.exports = "<div class=\"card\">\r\n  <div class=\"card-block\">\r\n    <h3 class=\"card-title\">{{dataset.name}}</h3>\r\n    <p>{{dataset.about}}</p>\r\n    <a class=\"btn btn-primary\" [routerLink]=\"['/catalog/datasets', dataset._id]\">Details</a>\r\n  </div>\r\n</div>\r\n\r\n\r\n\r\n"
+
+/***/ }),
+
+/***/ 343:
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  help works!\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ 344:
+/***/ (function(module, exports) {
+
 module.exports = "<div id=\"leaflet-map\">Map</div>\r\n"
 
 /***/ }),
 
-/***/ 386:
+/***/ 345:
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  This route doesn't exist.\n</p>\n"
+
+/***/ }),
+
+/***/ 389:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(152);
+module.exports = __webpack_require__(153);
 
 
 /***/ }),
@@ -664,7 +695,7 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataset_service__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dataset_search_service__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tag_service__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tag_service__ = __webpack_require__(99);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CatalogComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -714,8 +745,8 @@ var CatalogComponent = (function () {
 CatalogComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* Component */])({
         selector: 'app-catalog',
-        template: __webpack_require__(338),
-        styles: [__webpack_require__(327)],
+        template: __webpack_require__(340),
+        styles: [__webpack_require__(328)],
         providers: [__WEBPACK_IMPORTED_MODULE_2__dataset_search_service__["a" /* DatasetSearchService */]]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__dataset_service__["a" /* DatasetService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__dataset_service__["a" /* DatasetService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__dataset_search_service__["a" /* DatasetSearchService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__dataset_search_service__["a" /* DatasetSearchService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__tag_service__["a" /* TagService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__tag_service__["a" /* TagService */]) === "function" && _c || Object])
@@ -733,7 +764,7 @@ var _a, _b, _c;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dataset_service__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_switchMap__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_switchMap__ = __webpack_require__(355);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_switchMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_switchMap__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatasetDetailComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -768,8 +799,8 @@ var DatasetDetailComponent = (function () {
 DatasetDetailComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* Component */])({
         selector: 'app-dataset-detail',
-        template: __webpack_require__(339),
-        styles: [__webpack_require__(328)]
+        template: __webpack_require__(341),
+        styles: [__webpack_require__(329)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["c" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__dataset_service__["a" /* DatasetService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__dataset_service__["a" /* DatasetService */]) === "function" && _b || Object])
 ], DatasetDetailComponent);
@@ -849,8 +880,8 @@ var HelpComponent = (function () {
 HelpComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* Component */])({
         selector: 'app-help',
-        template: __webpack_require__(341),
-        styles: [__webpack_require__(330)]
+        template: __webpack_require__(343),
+        styles: [__webpack_require__(331)]
     }),
     __metadata("design:paramtypes", [])
 ], HelpComponent);
@@ -860,6 +891,42 @@ HelpComponent = __decorate([
 /***/ }),
 
 /***/ 98:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(5);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PageNotFoundComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var PageNotFoundComponent = (function () {
+    function PageNotFoundComponent() {
+    }
+    PageNotFoundComponent.prototype.ngOnInit = function () {
+    };
+    return PageNotFoundComponent;
+}());
+PageNotFoundComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Z" /* Component */])({
+        selector: 'app-page-not-found',
+        template: __webpack_require__(345),
+        styles: [__webpack_require__(333)]
+    }),
+    __metadata("design:paramtypes", [])
+], PageNotFoundComponent);
+
+//# sourceMappingURL=page-not-found.component.js.map
+
+/***/ }),
+
+/***/ 99:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -902,5 +969,5 @@ var _a;
 
 /***/ })
 
-},[386]);
+},[389]);
 //# sourceMappingURL=main.bundle.js.map
