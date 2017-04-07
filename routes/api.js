@@ -49,51 +49,63 @@ router.route('/datasets')
 
 router.route('/datasets/:_id')
   .get((req, res) => {
-    Dataset.findById(req.params._id, (err, dataset) => {
-      if (err) {
-        res.send(err);
-      }
-
-      res.json(dataset);
-    })
-  })
-
-  .put((req, res) => {
-    Dataset.findById(req.params._id, (err, dataset) => {
-      if (err) {
-        res.send(err);
-      }
-
-      dataset.name = req.body.name;
-      dataset.date = req.body.date;
-      dataset.about = req.body.about;
-      dataset.tags = req.body.tags;
-      dataset.downloadUrl = req.body.downloadUrl;
-      dataset.dynamicMapLayer = req.body.dynamicMapLayer;
-      dataset.lat = req.body.lat;
-      dataset.lon = req.body.lon;
-      dataset.zoom = req.body.zoom;
-
-      dataset.save((err) => {
+    if (req.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+      Dataset.findById(req.params._id, (err, dataset) => {
         if (err) {
           res.send(err);
         }
 
-        res.json({message: 'Dataset updated'})
+        res.json(dataset);
       })
-    })
+    } else {
+      res.status(403).send({ error: 'Forbidden' });
+    }
+  })
+
+  .put((req, res) => {
+    if (req.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+      Dataset.findById(req.params._id, (err, dataset) => {
+        if (err) {
+          res.send(err);
+        }
+
+        dataset.name = req.body.name;
+        dataset.date = req.body.date;
+        dataset.about = req.body.about;
+        dataset.tags = req.body.tags;
+        dataset.downloadUrl = req.body.downloadUrl;
+        dataset.dynamicMapLayer = req.body.dynamicMapLayer;
+        dataset.lat = req.body.lat;
+        dataset.lon = req.body.lon;
+        dataset.zoom = req.body.zoom;
+
+        dataset.save((err) => {
+          if (err) {
+            res.send(err);
+          }
+
+          res.json({message: 'Dataset updated'})
+        })
+      })
+    } else {
+      res.status(403).send({ error: 'Forbidden' });
+    }
   })
 
   .delete((req, res) => {
-    Dataset.remove({
-      _id: req.params._id
-    }, (err, dataset) => {
-      if (err) {
-        res.send(err);
-      }
+    if (req.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+      Dataset.remove({
+        _id: req.params._id
+      }, (err, dataset) => {
+        if (err) {
+          res.send(err);
+        }
 
-      res.json({message: 'Successfully deleted'});
-    })
+        res.json({message: 'Successfully deleted'});
+      })
+    } else {
+      res.status(403).send({ error: 'Forbidden' });
+    }
   });
 
 router.get('/datasets/search/:term', (req, res) => {
