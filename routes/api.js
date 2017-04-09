@@ -26,17 +26,13 @@ router.get('/datasets', (req, res) => {
 });
 
 router.get('/datasets/:_id', (req, res) => {
-  if (req.params._id.match(/^[0-9a-fA-F]{24}$/)) {
-    Dataset.findById(req.params._id, (err, dataset) => {
-      if (err) {
-        res.send(err);
-      }
+  Dataset.findById(req.params._id, (err, dataset) => {
+    if (err) {
+      res.send(err);
+    }
 
-      res.json(dataset);
-    })
-  } else {
-    res.status(403).send({ error: 'Forbidden' });
-  }
+    res.json(dataset);
+  })
 });
 
 router.get('/datasets/search/:term', (req, res) => {
