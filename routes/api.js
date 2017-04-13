@@ -20,9 +20,9 @@ router.get('/datasets', (req, res) => {
   Dataset.find((err, datasets) => {
     if (err) {
       res.send(err);
+    } else {
+      res.json(datasets);
     }
-
-    res.json(datasets);
   })
 });
 
@@ -30,9 +30,9 @@ router.get('/datasets/:_id', (req, res) => {
   Dataset.findById(sanitize(req.params._id), (err, dataset) => {
     if (err) {
       res.send(err);
+    } else {
+      res.json(dataset);
     }
-
-    res.json(dataset);
   })
 });
 
@@ -41,9 +41,9 @@ router.get('/datasets/search/:term', (req, res) => {
   Dataset.find({$or: [{name: searchExpression}, {tags: searchExpression}]}, (err, datasets) => {
     if (err) {
       res.send(err);
+    } else {
+      res.json(datasets);
     }
-
-    res.json(datasets);
   })
 });
 
@@ -51,9 +51,9 @@ router.get('/tags', (req, res) => {
   Dataset.find().distinct('tags', {}, (err, tags) => {
     if (err) {
       res.send(err);
+    } else {
+      res.json(tags);
     }
-
-    res.json(tags);
   })
 });
 
