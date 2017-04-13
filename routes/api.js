@@ -1,6 +1,7 @@
 const express = require('express');
 const Dataset = require('../models/dataset');
 const mongoose = require('mongoose');
+const sanitize = require('mongo-sanitize');
 
 mongoose.connect(`mongodb://${process.env.DBUSER}:${process.env.DBPASSWORD}@${process.env.DBHOST}:${process.env.DBPORT}/${process.env.DBNAME}`);
 
@@ -26,7 +27,7 @@ router.get('/datasets', (req, res) => {
 });
 
 router.get('/datasets/:_id', (req, res) => {
-  Dataset.findById(req.params._id, (err, dataset) => {
+  Dataset.findById(sanitize(req.params._id), (err, dataset) => {
     if (err) {
       res.send(err);
     }
@@ -36,7 +37,7 @@ router.get('/datasets/:_id', (req, res) => {
 });
 
 router.get('/datasets/search/:term', (req, res) => {
-  const searchExpression = new RegExp(req.params.term, 'i');
+  const searchExpression = new RegExp(sanitize(req.params.term), 'i');
   Dataset.find({$or: [{name: searchExpression}, {tags: searchExpression}]}, (err, datasets) => {
     if (err) {
       res.send(err);
