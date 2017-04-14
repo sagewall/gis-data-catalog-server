@@ -22,7 +22,6 @@
     "cors": "^2.8.1",
     "express": "^4.15.2",
     "helmet": "^3.5.0",
-    "mongo-express": "^0.38.0",
     "mongo-sanitize": "^1.0.0",
     "mongoose": "^4.9.1"
   },

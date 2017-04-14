@@ -5,8 +5,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const cors = require('cors');
-const mongoExpress = require('mongo-express/lib/middleware');
-const mongoExpressConfig = require('./mongo-express-config');
 
 const api = require(path.join(__dirname, 'routes/api'));
 const certbotResponse = process.env.CERTBOTRESPONSE;
@@ -23,8 +21,6 @@ app.use('/.well-known/acme-challenge/:content', (req, res) => {
 });
 
 app.use('/api', api);
-
-app.use('/mongo-express', mongoExpress(mongoExpressConfig));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
