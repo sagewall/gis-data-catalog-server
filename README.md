@@ -21,6 +21,7 @@ heroku config:set DBHOST=database host
 heroku config:set DBPORT=database port
 heroku config:set DBNAME=database name
 heroku config:set CERTBOTRESPONSE=certbot acme response
+heroku config:set NODE_ENV=production
 ```
 
 ### Docker Deployment
