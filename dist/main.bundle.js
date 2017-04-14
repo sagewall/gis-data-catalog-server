@@ -226,8 +226,7 @@ var CatalogSearchComponent = (function () {
             .switchMap(function (term) { return term
             ? _this.datasetSearchService.search(term)
             : __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].of([]); })
-            .catch(function (error) {
-            console.log(error);
+            .catch(function () {
             return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].of([]);
         });
     };
