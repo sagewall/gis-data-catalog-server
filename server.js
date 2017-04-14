@@ -18,7 +18,7 @@ app.use('/.well-known/acme-challenge/:content', (req, res) => {
 
 app.use('/api', api);
 
-app.get('*', (req, res) => {
+app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
