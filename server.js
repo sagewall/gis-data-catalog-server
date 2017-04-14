@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const http = require('http');
 const express = require('express');
-const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const cors = require('cors');
 
@@ -12,8 +11,6 @@ const certbotResponse = process.env.CERTBOTRESPONSE;
 const app = express();
 app.use(helmet());
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use('/.well-known/acme-challenge/:content', (req, res) => {
