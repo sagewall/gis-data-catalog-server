@@ -7,10 +7,10 @@ mongoose.connect(`mongodb://${process.env.DBUSER}:${process.env.DBPASSWORD}@${pr
 
 const router = express.Router();
 
-router.use((req, res, next) => {
-  console.log(req.originalUrl);
-  next();
-});
+// router.use((req, res, next) => {
+//   console.log(req.originalUrl);
+//   next();
+// });
 
 router.get('/', (req, res) => {
   res.send('gis-data-catalog api');
