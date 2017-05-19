@@ -20,7 +20,7 @@
   "dependencies": {
     "compression": "^1.6.2",
     "cors": "^2.8.1",
-    "express": "^4.15.2",
+    "express": "^4.15.3",
     "helmet": "^3.5.0",
     "mongo-sanitize": "^1.0.0",
     "mongoose": "^4.9.1"
