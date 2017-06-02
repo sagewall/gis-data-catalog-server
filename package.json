@@ -4,7 +4,6 @@
   "description": "GIS Data Catalog Express Server",
   "main": "server.js",
   "scripts": {
-    "test": "snyk test",
     "start": "node server.js"
   },
   "repository": {
@@ -25,7 +24,5 @@
     "mongo-sanitize": "^1.0.0",
     "mongoose": "^4.10.4"
   },
-  "devDependencies": {
-    "snyk": "^1.33.0"
-  }
+  "devDependencies": {}
 }
