@@ -21,11 +21,11 @@
     "compression": "^1.6.2",
     "cors": "^2.8.1",
     "express": "^4.15.3",
-    "helmet": "^3.5.0",
+    "helmet": "^3.6.1",
     "mongo-sanitize": "^1.0.0",
-    "mongoose": "^4.9.1"
+    "mongoose": "^4.10.4"
   },
   "devDependencies": {
-    "snyk": "^1.28.1"
+    "snyk": "^1.33.0"
   }
 }
