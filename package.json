@@ -17,12 +17,12 @@
   },
   "homepage": "https://github.com/sagewall/gis-data-catalog-server#readme",
   "dependencies": {
-    "compression": "^1.6.2",
-    "cors": "^2.8.1",
+    "compression": "^1.7.0",
+    "cors": "^2.8.4",
     "express": "^4.15.3",
     "helmet": "^3.6.1",
     "mongo-sanitize": "^1.0.0",
-    "mongoose": "^4.10.4"
+    "mongoose": "^4.11.1"
   },
   "devDependencies": {}
 }
