@@ -3,9 +3,7 @@ const Dataset = require('../models/dataset');
 const mongoose = require('mongoose');
 const sanitize = require('mongo-sanitize');
 
-mongoose.connect(`mongodb://${process.env.DBUSER}:${process.env.DBPASSWORD}@${process.env.DBHOST}:${process.env.DBPORT}/${process.env.DBNAME}`, {
-  useMongoClient: true
-});
+mongoose.connect(`mongodb://${process.env.DBUSER}:${process.env.DBPASSWORD}@${process.env.DBHOST}:${process.env.DBPORT}/${process.env.DBNAME}`);
 
 const router = express.Router();
 
